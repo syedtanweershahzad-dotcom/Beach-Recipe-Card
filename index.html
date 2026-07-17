@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beach Recipe Card</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+    <div class="recipe-card">
+        <div class="recipe-header">
+            <div class="image-container">
+                <img src="/image/The-Beach-1024x1536.jpg" alt="The Beach Cocktail" />
+            </div>
+
+            <h1>Beach Recipe</h1>
+            <p class="description">
+                A fruity summer drink, the Beach cocktail is quick to mix together
+                and perfect for all those summer gatherings!
+            </p>
+
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span class="review-count">6 Reviews</span>
+            </div>
+
+            <div class="action-buttons">
+                <button onclick="window.print()">
+                    <i class="fas fa-print"></i> Print
+                </button>
+                <button>
+                    <i class="fab fa-pinterest"></i> Pin
+                </button>
+                <button>
+                    <i class="far fa-star"></i> Rate
+                </button>
+            </div>
+
+            <div class="meta-info">
+                <div><strong>Prep Time:</strong> 5 minutes</div>
+                <div><strong>Cook Time:</strong> 0 minutes</div>
+                <div><strong>Total Time:</strong> 5 minutes</div>
+                <div><strong>Servings:</strong> <a href="#">1</a></div>
+                <div><strong>Author:</strong> <a href="#">Syed Tanweer Shahzad</a></div>
+            </div>
+        </div>
+
+        <div class="cook-mode-bar">
+            <label class="switch">
+                <input type="checkbox" id="cookModeToggle" />
+                <span class="slider round"></span>
+            </label>
+            <span><strong>Cook Mode</strong> Prevent your screen from going dark</span>
+        </div>
+
+        <div class="recipe-body">
+            <div class="taxonomy">
+                <span><strong>Course:</strong> Beverages</span>
+                <span><strong>Cuisine:</strong> American</span>
+            </div>
+
+            <hr />
+
+            <h2>Ingredients</h2>
+            <ul class="ingredients-list">
+                <li><input type="checkbox" /> 1 &frac12; ounces <a href="#">vodka</a></li>
+                <li><input type="checkbox" /> 1 ounce peach schnapps</li>
+                <li><input type="checkbox" /> 1 &frac12; ounces <a href="#">orange juice</a></li>
+                <li><input type="checkbox" /> 1 &frac12; ounces cranberry juice</li>
+                <li><input type="checkbox" /> ice</li>
+                <li>
+                    <input type="checkbox" />
+                    orange and maraschino cherries,
+                    <span class="garnish-text">as garnishes</span>
+                </li>
+            </ul>
+
+            <h2>Instructions</h2>
+            <ol class="instructions-list">
+                <li>
+                    Fill a cocktail mixing glass halfway with ice. Pour in the vodka,
+                    peach schnapps, orange juice, and cranberry juice. Gently stir.
+                </li>
+                <li>
+                    Fill a glass with ice and pour the cocktail over the ice. Garnish
+                    with fresh oranges and maraschino cherries.
+                </li>
+            </ol>
+
+            <h2>Notes</h2>
+            <ul class="notes-list">
+                <li>You can use fresh squeezed orange juice if you want.</li>
+                <li>Use pulp free orange juice so there is no pulp floating at the top.</li>
+                <li>This can be made into a pitcher drink to serve more people.</li>
+                <li>Pineapple juice can be substituted for the orange juice.</li>
+            </ul>
+
+            <h2>Nutrition</h2>
+            <p class="nutrition-stats">
+                <strong>Calories:</strong> 210kcal |
+                <strong>Carbohydrates:</strong> 16g |
+                <strong>Protein:</strong> 0.5g |
+                <strong>Fat:</strong> 0.1g |
+                <strong>Sodium:</strong> 2mg |
+                <strong>Fiber:</strong> 0.1g |
+                <strong>Sugar:</strong> 15g
+            </p>
+
+            <h3>Nutritional Disclaimer</h3>
+            <p class="disclaimer">
+                “The Country Cook” is not a dietician or nutritionist, and any nutritional
+                information shared is an estimate. If calorie count and other nutritional
+                values are important to you, we recommend running the ingredients through
+                whichever online nutritional calculator you prefer. Calories and other
+                nutritional values can vary quite a bit depending on which brands were used.
+            </p>
+        </div>
+
+        <div class="instagram-banner">
+            <div class="ig-icon">
+                <i class="fab fa-instagram"></i>
+            </div>
+            <div class="ig-text">
+                <h3>Did you make this recipe?</h3>
+                <p>
+                    Share it on Instagram <a href="#">@thecountrycook</a> and mention us
+                    <a href="#">#thecountrycook</a>!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const cookModeToggle = document.getElementById("cookModeToggle");
+
+        cookModeToggle.addEventListener("change", function () {
+            if (this.checked) {
+                document.body.classList.add("cook-mode");
+                console.log("Cook Mode Activated");
+            } else {
+                document.body.classList.remove("cook-mode");
+                console.log("Cook Mode Deactivated");
+            }
+        });
+    </script>
+</body>
+</html>
